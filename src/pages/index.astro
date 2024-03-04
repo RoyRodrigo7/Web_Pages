@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Description from '../components/Description.astro';
+import Navbar from '../components/Navbar.astro';
+import Title from '../components/Title.astro';
+import Info from '../components/Information.astro';
+import Video from '../components/Video.astro';
+import InfoII from '../components/InformationII.astro';
+import Images from '../components/Images.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+        <div class='mx-60'>
+            <Navbar />
+            <Description />
+            <Title />
+        </div>
+        <Info />
+        <Video />
+        <div class='mx-60'>
+            <InfoII />
+        </div>
+        <Images />
+        <Footer />
+    </main>
+</Layout>

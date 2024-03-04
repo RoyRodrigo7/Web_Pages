@@ -1,0 +1,50 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+	</head>
+    <body class='min-h-screen'>
+        <slot />
+        <script>
+            window.addEventListener("scroll", function() {
+                var body = document.querySelector("body");
+                var scrollPosition = window.scrollY;
+
+                // Define el color de fondo en función de la posición del scroll
+                if (scrollPosition > 2200) {
+                    body.style.backgroundColor = "#A56DFF"; // Cambia el color de fondo a gris claro cuando se hace scroll más de 100px
+                } else {
+                    body.style.backgroundColor = "#F2F2F2"; // Cambia el color de fondo a blanco cuando se hace scroll menos de 100px
+                }
+            });
+        </script>
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: Montserrat;
+		background: #F2F2F2;
+		background-size: 224px;
+        color-scheme: light;
+	}
+    body {
+        margin: 0;
+        padding: 0;
+        transition: background-color 1s ease; /* Transición suave para el cambio de color de fondo */
+    }
+</style>

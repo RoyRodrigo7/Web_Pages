@@ -1,0 +1,51 @@
+---
+import Button from './Button.astro';
+---
+
+<div class='information'>
+    <div class='text'>
+        14islands designs and builds <span style='color: #A2A2A9'>digital<br>
+            products, brands,</span> and <span style='color: #A2A2A9'>experiences —</span><br>
+        with offices on the islands of Stockholm,<br>
+        <span style='color: #A2A2A9'>Florianópolis & Reykjavík.</span>
+    </div>
+    <div class='description'>
+        <div class='content'>
+            OUR TEAM FOSTERS AN INCLUSIVE CULTURE OF CRAFT,
+            <br>COLLABORATION, AND CREATIVITY.
+            <div class='button-container'>
+                <Button title='START' href='/'/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .information{
+        height: 90vh;
+        background-color: #000;
+        color: #fff;
+    }
+    .description{
+        margin: 100px 400px 0px 0px ;
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-end;
+        
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 25px;
+
+    }
+    .text{
+        font-size: 70px;
+        padding: 50px 0px 0px 100px;
+    }
+    .button-container{
+        margin-top: 50px;
+    }
+
+</style>

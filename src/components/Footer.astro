@@ -1,0 +1,50 @@
+---
+import Link from './LinkNavbar.astro'
+---
+
+<div class='information'>
+    <div class='description'>
+        <div class='b'>
+            <p class='text-7xl'>EMILIAN</p>
+        </div>
+        <div class='b'>
+            The standard chunk<br>
+            of Lorem Ipsum used<br>
+            since the 1500s is<br>
+            reproduced below<br>
+        </div>
+        <div class='flex my-auto w-2/6 b' style='flex-direction: column;'>
+            <span style='font-weight: bold'>MENU</span><br>
+            <Link title='HOME ' link='/about'/>
+            <Link title='ABOUT' link='/about'/>
+            <Link title='START' link='/about'/>
+            <Link title='CONTACT' link='/about'/>
+        </div>
+        <div class='text b'>
+            roydanner22<span style='color: #A2A2A9'>@gmail.com</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .information{
+        height: 50vh;
+        background-color: #000;
+        color: #fff;
+        margin-top: 100px;
+    }
+    .description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 173px 100px;
+    }
+    .b{
+        width: 800px;
+        margin: auto;
+    }
+    .text{
+        font-size: 30px;
+
+    }
+</style>

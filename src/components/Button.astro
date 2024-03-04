@@ -1,0 +1,33 @@
+---
+const {title} = Astro.props;
+const {link} = Astro.props;
+---
+
+<a class='button' href={link}>
+    <p class='text'>{title}</p>
+    <slot />
+</a>
+
+<style>
+    .button {
+        display: flex;
+        font-size: 15px;
+        border: solid 1px;
+        cursor: pointer;
+        padding: 2px 50px;
+        border-radius: 35px;
+        align-items: center;
+        transition: transform 0.5s; 
+    }
+
+    .button:hover > p {
+        transform: scale(1.2);
+    }
+
+    .button > p {
+        transition: transform 0.5s;
+    }
+    .text{
+        margin: 5px auto;
+    }
+</style>

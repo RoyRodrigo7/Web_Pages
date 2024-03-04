@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="c1"></div>
+    <div class="c2" style="background-image: url('');"></div>
+    <div class="c3" style="background-image: url('');"></div>
+    <div class="c4" style="background-image: url('');"></div>
+    <div class="c5" style="background-image: url('');"></div>
+    <div class="c6" style="background-image: url('');"></div>
+</div>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    .c1 {
+        background-size: cover;
+        background-position: center;
+    }
+    .c2 {
+        background-size: cover;
+        background-position: center;
+    }
+    .c3 {
+        background-size: cover;
+        background-position: center;
+    }
+    .c4 {
+        background-size: cover;
+        background-position: center;
+    }
+    .c5 {
+        background-size: cover;
+        background-position: center;
+    }
+    .c6 {
+        background-size: cover;
+        background-position: center;
+    }
+
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const cards = document.querySelectorAll('.c1');
+        const cards2 = document.querySelectorAll('.c2');
+        const cards3 = document.querySelectorAll('.c3');
+        const cards4 = document.querySelectorAll('.c4');
+        const cards5 = document.querySelectorAll('.c5');
+        const cards6 = document.querySelectorAll('.c6');
+        const images = [
+            'bird-8510323_640.jpg',
+            'cat-8540772_640.jpg',
+            'watermelon-8368960_640.png',
+            'cocktail-8308286_640.jpg',
+            'blackmagic-design-4054196_640.jpg',
+            'img1.jpg',
+            'img2.jpg'
+        ];
+        let currentImageIndex = 0;
+
+        function changeImages() {
+            cards.forEach((card, index) => {
+                card.style.backgroundImage = `url(${images[currentImageIndex]})`;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            });
+        }
+        setInterval(changeImages, 1000);
+
+        function changeImages2() {
+            cards2.forEach((card, index) => {
+                card.style.backgroundImage = `url(${images[currentImageIndex]})`;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            });
+        }
+        setInterval(changeImages2, 1100);
+
+        function changeImages3() {
+            cards3.forEach((card, index) => {
+                card.style.backgroundImage = `url(${images[currentImageIndex]})`;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            });
+        }
+        setInterval(changeImages3, 900);
+
+        function changeImages4() {
+            cards4.forEach((card, index) => {
+                card.style.backgroundImage = `url(${images[currentImageIndex]})`;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            });
+        }
+        setInterval(changeImages4, 1300);
+
+        function changeImages5() {
+            cards5.forEach((card, index) => {
+                card.style.backgroundImage = `url(${images[currentImageIndex]})`;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            });
+        }
+        setInterval(changeImages5, 800);
+
+        function changeImages6() {
+            cards6.forEach((card, index) => {
+                card.style.backgroundImage = `url(${images[currentImageIndex]})`;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            });
+        }
+        setInterval(changeImages6, 1200);
+    });
+</script>

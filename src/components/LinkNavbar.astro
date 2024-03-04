@@ -1,0 +1,24 @@
+---
+const {title} = Astro.props;
+const {link} = Astro.props;
+---
+
+<a class='links' href={link}>
+    {title}
+    <slot />
+</a>
+
+<style>
+
+.links {
+    cursor: pointer;
+    font-size: 15px;
+    border-bottom: solid 1px transparent;
+    font-weight: normal; 
+    transition: transform 0.5s;
+}
+
+.links:hover {
+    transform: scale(1.2);
+}
+</style>
